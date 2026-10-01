@@ -17,5 +17,6 @@ return static function (ContainerConfigurator $container) {
     $container->services()
         ->set('twig.extension.intl', IntlExtension::class)
             ->tag('twig.extension')
+            ->tag('kernel.reset', ['method' => 'reset'])
     ;
 };
